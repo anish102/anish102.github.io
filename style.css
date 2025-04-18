@@ -6,10 +6,11 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    background: linear-gradient(135deg, #ffecd2, #fcb69f, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: backgroundShift 15s ease infinite, fadeIn 1s ease-in;
     color: #333;
     padding: 2rem;
-    animation: fadeIn 1s ease-in;
 }
 
 @keyframes fadeIn {
@@ -21,6 +22,20 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes backgroundShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }
 
@@ -38,7 +53,7 @@ h1 {
 
 h2 {
     font-size: 1.75rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     color: #1f2937;
     border-bottom: 2px solid #4f46e5;
     padding-bottom: 0.3rem;
@@ -53,11 +68,17 @@ li {
 .container {
     max-width: 80%;
     margin: auto;
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    background: transparent;
     animation: fadeIn 1.4s ease-in;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-left: 6px solid #4f46e5;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 ul {
