@@ -4,125 +4,186 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anish Karki | Portfolio</title>
+    <title>Anish Karki</title>
+    <link rel="icon" type="image/png" href="icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Animated Background Circles -->
+    <div class="animated-bg">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+    </div>
+    <!-- Cursor Particle Canvas -->
+    <canvas id="cursor-anim-canvas"></canvas>
+
     <div class="container container-glow">
         <header>
-            <h1>Anish Karki</h1>
-            <p>Python Backend Developer | Django, FastAPI, Odoo</p>
-            <p>Lalitpur, Nepal | <a href="tel:+9779864261558">9864261558</a> | <a
-                    href="mailto:anishkarki695@gmail.com">anishkarki695@gmail.com</a> | <a
-                    href="https://github.com/anish102">GitHub</a> | <a
-                    href="https://www.linkedin.com/in/anish-karki-b20735216">LinkedIn</a></p>
+            <div class="header-profile">
+                <img src="profile.jpg" alt="Profile Photo" class="profile-img" />
+                <div>
+                    <h1>Anish Karki</h1>
+                    <p>Python Backend Developer | Django, FastAPI, Odoo</p>
+                    <p>
+                        Lalitpur, Nepal |
+                        <a href="tel:+9779864261558">9864261558</a> |
+                        <a href="mailto:anishkarki695@gmail.com">anishkarki695@gmail.com</a> |
+                        <a href="https://github.com/anish102" target="_blank">GitHub</a> |
+                        <a href="https://www.linkedin.com/in/anish-karki-b20735216" target="_blank">LinkedIn</a>
+                    </p>
+                    <button id="download-cv" class="download-btn">Download CV</button>
+                </div>
+            </div>
         </header>
+
+        <!-- Sticky Tabs Below Header -->
+        <!-- <nav class="sticky-tabs">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#languages">Languages</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#interests">Interests</a></li>
+            </ul>
+        </nav> -->
 
         <section id="about">
             <h2>About Me</h2>
-            <p>I'm a final semester CSIT student and backend developer with over a year of experience building Odoo
-                modules and personal projects using Django and FastAPI. I'm passionate about building clean, scalable
-                APIs and web services, and eager to grow in a fast-paced development environment.</p>
-        </section>
-
-        <section id="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li><strong>Python Backend Developer:</strong><br />
-                    <ul><strong><a href="https://geomate.com.np/">Telematics Tech Pvt. Ltd.</a>(April 2024 -
-                            Present)</strong></ul>
-                    <ul>Developed and customized OdooERP modules for MIS systems using Python, PostgreSQL, JavaScript,
-                        and
-                        XML.</ul>
-                    <ul>Automated finance and HR workflows, reducing manual operations by 80%.</ul>
-                    <ul>Created API endpoints to communicate with external as well as internal apps.</ul>
-                    <ul>Deployment to production Linux servers, testing, and conducting peer code reviews.</ul>
-                    <ul>Started as an intern and promoted to full-time developer in July 2024.</ul>
-                </li>
-            </ul>
+            <p>
+                I'm an IT graduate and backend developer with over a year of experience building APIs using FastAPI, and
+                Odoo modules. I'm passionate about building clean, scalable
+                APIs and web services, and eager to grow in a fast-paced development environment.
+            </p>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
-            <div class="skills-grid">
-                <div>Languages: Python, JavaScript, Java, Go</div>
-                <div>Frameworks: Django, FastAPI, Odoo</div>
-                <div>Databases: PostgreSQL, MySQL</div>
-                <div>Tools: Git, Docker, Linux</div>
-                <div>Frontend: HTML, CSS, JavaScript (basic)</div>
-            </div>
+            <ul class="skills-list">
+                <li><span>Languages:</span> Python, JavaScript, Java, Go</li>
+                <li><span>Frameworks:</span> Django, FastAPI, Odoo</li>
+                <li><span>Databases:</span> PostgreSQL, MySQL</li>
+                <li><span>Tools:</span> Git, Docker, Linux</li>
+                <li><span>Frontend:</span> HTML, CSS, JavaScript (basic)</li>
+            </ul>
         </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li class="project-item">
-                    <div class="project-title"><strong>Loan Prediction System:</strong></div>
-                    <div class="project-description">A machine learning-powered application that predicts loan
-                        eligibility based on user input. Built
-                        with FastAPI, PostgreSQL, and JWT authentication.
-                    </div>
-                    <div class="project-links">[<a
-                            href="https://github.com/anish102/loan-eligibility-predictor">GitHub</a>]</div>
-                </li>
-                <li class="project-item">
-                    <div class="project-title"><strong>Movie Tracker App:</strong></div>
-                    <div class="project-description">An application to track watched movies, allowing users to add,
-                        update,
-                        and delete entries. Developed
-                        using FastAPI, PostgreSQL, and secured with JWT authentication.</div>
-                    <div class="project-links">[<a href="https://github.com/anish102/CineCache">GitHub</a>]</div>
-                </li>
-                <li class="project-item">
-                    <div class="project-title"><strong>Django Kafka Integration:</strong></div>
-                    <div class="project-description">Demonstrates microservice communication using Apache Kafka with a
-                        Django
-                        backend, facilitating
-                        scalable and asynchronous data processing.</div>
-                    <div class="project-links">[<a
-                            href="https://github.com/anish102/Django_Kafka_Integration">GitHub</a>]
-                    </div>
-                </li>
-                <li class="project-item">
-                    <div class="project-title"><strong>Library Management System:</strong></div>
-                    <div class="project-description">A Django-based web application for managing library operations,
-                        including
-                        book inventory, member
-                        management, and transaction tracking.</div>
-                    <div class="project-links">[<a href="https://github.com/anish102/liMS">GitHub</a>]</div>
-                </li>
-                <li class="project-item">
-                    <div class="project-title"><strong>To-Do App:</strong></div>
-                    <div class="project-description">A simple task management application built with Django, featuring
-                        user
-                        authentication and CRUD
-                        functionalities for to-do items.</div>
-                    <div class="project-links">[<a href="https://github.com/anish102/Todo-Django">GitHub</a>]</div>
-                </li>
-            </ul>
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Backend Developer</h3>
+                    <span class="company"><a href="https://istemlab.ai/" target="_blank">I.STEM Lab Pvt. Ltd.</a> (May
+                        2025 - Present)</span>
+                    <ul>
+                        <li>Worked on creating secure and scalable REST APIs with the help of Python and FastAPI.</li>
+                        <li>Managed deployment on production Linux servers using Docker containers and automated CI/CD
+                            pipelines with GitHub Actions.</li>
+                        <li>Worked on microservices and gained hands on experience of communication between services.
+                        </li>
+                        <li>Wrote unit and integration tests using pytest to ensure code reliability and
+                            maintainability.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>Python Odoo Developer</h3>
+                    <span class="company"><a href="https://geomate.com.np/" target="_blank">Telematics Tech Pvt.
+                            Ltd.</a> (April 2024 - April 2025)</span>
+                    <ul>
+                        <li>Developed and customized OdooERP modules for MIS systems using Python, PostgreSQL,
+                            JavaScript, and XML.</li>
+                        <li>Automated finance and HR workflows, reducing manual operations by 80%.</li>
+                        <li>Created API endpoints to communicate with external as well as internal apps.</li>
+                        <li>Deployment to production Linux servers, testing, and conducting peer code reviews.</li>
+                        <li>Started as an intern and promoted to full-time developer in July 2024.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section id="education">
             <h2>Education</h2>
             <ul>
-                <li><strong>BSc. CSIT</strong>, Patan Multiple Campus (2021-2025), Final Semester</li>
-                <li><strong>+2 Science</strong>, Capital College and Research Center (2019-2021), Grade A</li>
+                <li><strong>BSc. CSIT</strong>, Patan Multiple Campus (2021-2025)<br />Data Structures, Algorithms,
+                    Computer
+                    Architecture, Operating Systems, Computer Network and
+                    Software Engineering.</li>
+                <li><strong>+2 Science</strong>, Capital College and Research Center (2019-2021)</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-list">
+                <div class="project-item">
+                    <h3>Loan Prediction System</h3>
+                    <p>A machine learning-powered application that predicts loan eligibility based on user input. Built
+                        with FastAPI, PostgreSQL, and JWT authentication.</p>
+                    <a href="https://github.com/anish102/loan-eligibility-predictor" target="_blank">GitHub</a>
+                </div>
+                <div class="project-item">
+                    <h3>Movie Tracker App</h3>
+                    <p>An application to track watched movies, allowing users to add, update, and delete entries.
+                        Developed using FastAPI, PostgreSQL, and secured with JWT authentication.</p>
+                    <a href="https://github.com/anish102/CineCache" target="_blank">GitHub</a>
+                </div>
+                <div class="project-item">
+                    <h3>Django Kafka Integration</h3>
+                    <p>Demonstrates microservice communication using Apache Kafka with a Django backend, facilitating
+                        scalable and asynchronous data processing.</p>
+                    <a href="https://github.com/anish102/Django_Kafka_Integration" target="_blank">GitHub</a>
+                </div>
+                <div class="project-item">
+                    <h3>Library Management System</h3>
+                    <p>A Django-based web application for managing library operations, including book inventory, member
+                        management, and transaction tracking.</p>
+                    <a href="https://github.com/anish102/liMS" target="_blank">GitHub</a>
+                </div>
+                <div class="project-item">
+                    <h3>To-Do App</h3>
+                    <p>A simple task management application built with Django, featuring user authentication and CRUD
+                        functionalities for to-do items.</p>
+                    <a href="https://github.com/anish102/Todo-Django" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="languages">
+            <h2>Languages</h2>
+            <ul>
+                <li>English (Professional)</li>
+                <li>Nepali (Native)</li>
+                <li>Hindi (Conversational)</li>
+            </ul>
+        </section>
+
+        <section id="interests">
+            <h2>Interests</h2>
+            <ul>
+                <li>Machine Learning and AI</li>
+                <li>Cloud Infrastructure</li>
+                <li>Open Source Contribution</li>
+                <li>Travel & Photography</li>
             </ul>
         </section>
 
         <section id="hobbies">
             <h2>Hobbies</h2>
             <ul>
-                <li>Riding Motorcycle, Watching and Playing Football, Playing Video Games, Watching Anime, Listening
-                    Musics, Web Browsing, and Sleeping.</li>
+                <li>Riding Motorcycle, Watching and Playing Football, Playing Video Games, Watching Anime, Listening to
+                    Music/Podcasts, and Web Browsing.</li>
             </ul>
         </section>
+        <footer>
+            <p>&copy; 2025 Anish Karki. All rights reserved.</p>
+        </footer>
     </div>
+    <script src="script.js"></script>
 </body>
-<footer>
-    <p>&copy; 2025 Anish Karki. All rights reserved.</p>
-</footer>
 
 </html>
