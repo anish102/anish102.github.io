@@ -2,7 +2,7 @@
 document.getElementById('download-cv').addEventListener('click', function () {
     const link = document.createElement('a');
     link.href = 'cv.pdf';
-    link.download = 'Anish_Karki_CV.pdf';
+    link.download = 'CV_Anish.pdf';
     link.click();
 });
 
